@@ -57,6 +57,9 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "/" },
   robots: { index: true, follow: true },
+  icons: {
+    other: [{ rel: "mask-icon", url: "/safari-pinned-tab.svg", color: "#3F6248" }],
+  },
 };
 
 export default function RootLayout({

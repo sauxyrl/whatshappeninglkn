@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer frame ring -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="black" stroke-width="4"/>
+  <!-- Horizon line -->
+  <line x1="11" y1="58" x2="89" y2="58" stroke="black" stroke-width="4" stroke-linecap="round"/>
+  <!-- Half-disc sun sitting on horizon -->
+  <path d="M 27 58 A 23 23 0 0 1 73 58 Z" fill="black"/>
+</svg>
