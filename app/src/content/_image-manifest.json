@@ -71,28 +71,40 @@
     "license": "n/a — placeholder, replace before launch",
     "note": "Eat card photo: North Harbor Club. Swap for licensed photo or Host photography."
   },
-  "images/eat/port-city-club.png": {
+  "images/eat/hello-sailor.png": {
     "source": "placeholder",
     "photographer": "generated",
     "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Port City Club. Swap for licensed photo or Host photography."
+    "note": "Eat card photo: Hello, Sailor. Swap for licensed photo or Host photography."
   },
-  "images/eat/dressler-restaurant.png": {
+  "images/eat/lakehouse-wine-bar.png": {
     "source": "placeholder",
     "photographer": "generated",
     "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Dressler's. Swap for licensed photo or Host photography."
+    "note": "Eat card photo: LakeHouse. Swap for licensed photo or Host photography."
   },
-  "images/eat/big-view-diner.png": {
+  "images/eat/fontana-di-vino.png": {
     "source": "placeholder",
     "photographer": "generated",
     "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Big View Diner. Swap for licensed photo or Host photography."
+    "note": "Eat card photo: Fontana di Vino. Swap for licensed photo or Host photography."
   },
   "images/eat/epic-chophouse.png": {
     "source": "placeholder",
     "photographer": "generated",
     "license": "n/a — placeholder, replace before launch",
     "note": "Eat card photo: Epic Chophouse. Swap for licensed photo or Host photography."
+  },
+  "images/eat/fresh-egg.png": {
+    "source": "placeholder",
+    "photographer": "generated",
+    "license": "n/a — placeholder, replace before launch",
+    "note": "Eat card photo: Fresh Egg. Swap for licensed photo or Host photography."
+  },
+  "images/eat/suffolk-punch-huntersville.png": {
+    "source": "placeholder",
+    "photographer": "generated",
+    "license": "n/a — placeholder, replace before launch",
+    "note": "Eat card photo: Suffolk Punch. Swap for licensed photo or Host photography."
   }
 }

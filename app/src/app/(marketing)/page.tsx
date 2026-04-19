@@ -62,25 +62,6 @@ const QUICK_NAV: Array<{
   },
 ];
 
-// Placeholder testimonials — replace with real newcomer quotes before launch.
-const TESTIMONIALS: Array<{ quote: string; attribution: string }> = [
-  {
-    quote:
-      "I watched eight of these videos the weekend before we moved. Showed up in Davidson feeling like we already knew where the coffee was.",
-    attribution: "Recent mover, Davidson (placeholder)",
-  },
-  {
-    quote:
-      "My wife and I were deciding between three suburbs of Charlotte. This was the thing that made us pick Cornelius.",
-    attribution: "Relocation from Atlanta (placeholder)",
-  },
-  {
-    quote:
-      "The neighborhood pages are worth more than an hour with a realtor.",
-    attribution: "New homeowner, Mooresville (placeholder)",
-  },
-];
-
 export default function HomePage() {
   const videos = getAllVideos();
   const latest = videos.slice(0, 6);
@@ -194,7 +175,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Testimonials */}
+      {/* What newcomers say — honest block. Real quotes replace this as the Host collects them. */}
       <section
         aria-labelledby="testimonials"
         className="mx-auto max-w-6xl px-6 py-20 md:px-12 md:py-24 lg:px-24"
@@ -206,22 +187,29 @@ export default function HomePage() {
           id="testimonials"
           className="mt-2 font-serif text-3xl tracking-tight text-ink md:text-4xl"
         >
-          Heard from the people we moved with.
+          We&rsquo;re listening.
         </h2>
-        <ul className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-3">
-          {TESTIMONIALS.map((t, i) => (
-            <li key={i}>
-              <figure className="h-full border-l-2 border-lkn-sage pl-6">
-                <blockquote className="font-serif text-lg italic leading-relaxed text-ink">
-                  &ldquo;{t.quote}&rdquo;
-                </blockquote>
-                <figcaption className="mt-4 text-sm text-muted-ink">
-                  — {t.attribution}
-                </figcaption>
-              </figure>
-            </li>
-          ))}
-        </ul>
+        <div className="mt-10 grid max-w-4xl grid-cols-1 gap-8 md:grid-cols-2">
+          <p className="font-serif text-[1.0625rem] leading-[1.75] text-ink-soft">
+            This site is new. Real reader quotes go here once people write
+            in — we won&rsquo;t invent them, and we won&rsquo;t run a &ldquo;500 happy
+            movers&rdquo; badge we can&rsquo;t back up. If the videos or neighborhood
+            pages saved you a bad afternoon, or confirmed a move you were
+            already making, we&rsquo;d love to hear it.
+          </p>
+          <p className="font-serif text-[1.0625rem] leading-[1.75] text-ink-soft">
+            And if something on this site is wrong, out of date, or mislabeled
+            — especially an address, a neighborhood fact, or an event that
+            moved — please tell us. Corrections are the fastest way this
+            gets better.{" "}
+            <Link
+              href="/contact"
+              className="whitespace-nowrap font-medium text-lkn-deep underline-offset-4 hover:underline"
+            >
+              Send a note →
+            </Link>
+          </p>
+        </div>
       </section>
     </>
   );

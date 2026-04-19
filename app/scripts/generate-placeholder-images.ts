@@ -41,10 +41,12 @@ const NEIGHBORHOODS: Neighborhood[] = [
 const EAT_SPOTS: EatSpot[] = [
   { slug: "kindred-davidson", name: "Kindred", from: "#0A3D62", to: "#4F7A5C" },
   { slug: "north-harbor-club", name: "North Harbor Club", from: "#1E90FF", to: "#0A3D62" },
-  { slug: "port-city-club", name: "Port City Club", from: "#0A3D62", to: "#1F4A2A" },
-  { slug: "dressler-restaurant", name: "Dressler's", from: "#4F7A5C", to: "#0A3D62" },
-  { slug: "big-view-diner", name: "Big View Diner", from: "#1F4A2A", to: "#4F7A5C" },
+  { slug: "hello-sailor", name: "Hello, Sailor", from: "#0A3D62", to: "#1F4A2A" },
+  { slug: "lakehouse-wine-bar", name: "LakeHouse", from: "#4F7A5C", to: "#0A3D62" },
+  { slug: "fontana-di-vino", name: "Fontana di Vino", from: "#1F4A2A", to: "#4F7A5C" },
   { slug: "epic-chophouse", name: "Epic Chophouse", from: "#0A3D62", to: "#1E90FF" },
+  { slug: "fresh-egg", name: "Fresh Egg", from: "#4F7A5C", to: "#1E90FF" },
+  { slug: "suffolk-punch-huntersville", name: "Suffolk Punch", from: "#1E90FF", to: "#1F4A2A" },
 ];
 
 function gradientSvg(label: string, w: number, h: number, from: string, to: string) {

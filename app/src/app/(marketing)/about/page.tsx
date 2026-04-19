@@ -1,6 +1,6 @@
 // AboutPage
 // ui-ux-pro-max: styles.csv "Editorial Grid / Magazine" (long-form, serif body)
-// DESIGN-SYSTEM.md §1 + §3 — Host story placeholder.
+// DESIGN-SYSTEM.md §1 + §3 — honest site description; no fabricated Host bio.
 
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -9,7 +9,7 @@ import { siteConfig } from "@/lib/site-config";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Who runs What's Happening LKN, why the site exists, and the honest limits of what we cover.",
+    "What this site is, what it isn't, and why it exists. An honest editorial guide to moving to Lake Norman, NC.",
 };
 
 export default function AboutPage() {
@@ -22,38 +22,51 @@ export default function AboutPage() {
 
       <div className="mt-10 max-w-prose space-y-6 font-serif text-[1.0625rem] leading-[1.75] text-ink-soft">
         <p>
-          Placeholder — the Host rewrites this section in first person before
-          launch.
+          {siteConfig.name} is an editorial guide to Lake Norman, NC for
+          people who just moved here, are seriously considering it, or want
+          a second opinion before signing on a specific town. It exists
+          because most writing about the area is either real-estate
+          marketing or Chamber-of-Commerce boosterism, and neither of those
+          is useful when the question is actually &ldquo;will my family be
+          happy here.&rdquo;
         </p>
         <p>
-          What&rsquo;s Happening LKN exists because most of what&rsquo;s written about
-          moving to Lake Norman is either a Chamber of Commerce brochure or
-          a realtor&rsquo;s blog post. Neither is wrong exactly — they&rsquo;re just not
-          useful to somebody trying to figure out if their family would
-          actually be happy living here.
+          The site is maintained by a single creator — a video-first,
+          long-form host — who lives in the five-town area and publishes
+          one video at a time, with the neighborhood pages, eat list, and
+          event calendar updated as the research catches up. Every video
+          page has a hand-written intro that covers what&rsquo;s happening in
+          the frame and why it matters. Every neighborhood page tries to
+          tell you what the town is actually like on a Wednesday, not just
+          on the prettiest Saturday morning.
         </p>
         <p>
-          The videos come from one person who lives down the road. Each
-          neighborhood page is written the way you&rsquo;d brief a close friend
-          who&rsquo;s moving to town next month. The dining list is curated. The
-          events list is short on purpose.
+          <strong className="text-ink">What this site isn&rsquo;t:</strong> we
+          are not licensed real-estate professionals, nothing here is
+          relocation or investment advice, no specific properties are for
+          sale on this site, and no link to an MLS listing is ever coming.
+          Editorial standards are honest-guide-to-a-place, not tour-with-an-
+          agenda. If you need a realtor, we can point you to a handful of
+          good ones — that&rsquo;s not this.
         </p>
         <p>
-          <strong className="text-ink">What we don&rsquo;t do:</strong> we are not
-          licensed real-estate professionals, this is not relocation advice,
-          and no individual property is for sale on this site. If you want a
-          realtor, we can point you to one — but that&rsquo;s not what we are.
+          <strong className="text-ink">What we&rsquo;re building toward:</strong>
+          enough long-form neighborhood coverage that a newcomer can get a
+          week&rsquo;s worth of reading in one sitting, enough video depth that
+          you feel like you&rsquo;ve already visited before you visit, and a
+          weekly cadence of new content so it rewards coming back.
         </p>
         <p>
-          Got a tip, correction, or an honest disagreement with something we
-          published?{" "}
+          Got a tip, correction, or an honest disagreement with something
+          we published?{" "}
           <Link
             href="/contact"
             className="text-lkn-deep underline-offset-4 hover:underline"
           >
             Send a note
           </Link>
-          . We read every message.
+          . We read every message. The best ones change what ends up on
+          the site.
         </p>
       </div>
 
