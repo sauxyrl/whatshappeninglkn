@@ -1,110 +1,128 @@
 {
-  "images/neighborhoods/cornelius-mobile.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Cornelius, mobile. Swap for art-directed Host photography."
+  "images/neighborhoods/cornelius-mobile.jpg": {
+    "source": "wikimedia",
+    "photographer": "DiscoA340",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Norman_seen_from_Cornelius_Rd.jpg",
+    "note": "Neighborhood hero: Lake Norman seen from Cornelius Road (mobile)."
   },
-  "images/neighborhoods/cornelius-desktop.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Cornelius, desktop. Swap for art-directed Host photography."
+  "images/neighborhoods/cornelius-desktop.jpg": {
+    "source": "wikimedia",
+    "photographer": "DiscoA340",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Lake_Norman_seen_from_Cornelius_Rd.jpg",
+    "note": "Neighborhood hero: Lake Norman seen from Cornelius Road (desktop)."
   },
-  "images/neighborhoods/davidson-mobile.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Davidson, mobile. Swap for art-directed Host photography."
+  "images/neighborhoods/davidson-mobile.jpg": {
+    "source": "wikimedia",
+    "photographer": "Brett VA (Flickr: smart_growth)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/smart_growth/6124620552/",
+    "note": "Neighborhood hero: Commercial street in Davidson, NC (mobile)."
   },
-  "images/neighborhoods/davidson-desktop.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Davidson, desktop. Swap for art-directed Host photography."
+  "images/neighborhoods/davidson-desktop.jpg": {
+    "source": "wikimedia",
+    "photographer": "Brett VA (Flickr: smart_growth)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/smart_growth/6124620552/",
+    "note": "Neighborhood hero: Commercial street in Davidson, NC (desktop)."
   },
-  "images/neighborhoods/huntersville-mobile.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Huntersville, mobile. Swap for art-directed Host photography."
+  "images/neighborhoods/huntersville-mobile.jpg": {
+    "source": "wikimedia",
+    "photographer": "Brett VA (Flickr: smart_growth)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/smart_growth/5488718307/",
+    "note": "Neighborhood hero: Huntersville, North Carolina (2009) (mobile)."
   },
-  "images/neighborhoods/huntersville-desktop.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Huntersville, desktop. Swap for art-directed Host photography."
+  "images/neighborhoods/huntersville-desktop.jpg": {
+    "source": "wikimedia",
+    "photographer": "Brett VA (Flickr: smart_growth)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/smart_growth/5488718307/",
+    "note": "Neighborhood hero: Huntersville, North Carolina (2009) (desktop)."
   },
-  "images/neighborhoods/mooresville-mobile.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Mooresville, mobile. Swap for art-directed Host photography."
+  "images/neighborhoods/mooresville-mobile.jpg": {
+    "source": "wikimedia",
+    "photographer": "Cdtew (Wikimedia Commons)",
+    "license": "CC BY-SA 3.0 + GFDL 1.2+",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mooresville_Historic_District_(Main_Street).jpg",
+    "note": "Neighborhood hero: Mooresville Historic District — Main Street (mobile)."
   },
-  "images/neighborhoods/mooresville-desktop.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Mooresville, desktop. Swap for art-directed Host photography."
+  "images/neighborhoods/mooresville-desktop.jpg": {
+    "source": "wikimedia",
+    "photographer": "Cdtew (Wikimedia Commons)",
+    "license": "CC BY-SA 3.0 + GFDL 1.2+",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mooresville_Historic_District_(Main_Street).jpg",
+    "note": "Neighborhood hero: Mooresville Historic District — Main Street (desktop)."
   },
-  "images/neighborhoods/denver-mobile.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Denver, mobile. Swap for art-directed Host photography."
+  "images/neighborhoods/denver-mobile.jpg": {
+    "source": "wikimedia",
+    "photographer": "James St. John (Flickr)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/47445767@N05/49615051057/",
+    "note": "Neighborhood hero: Lake Norman, North Carolina (mobile)."
   },
-  "images/neighborhoods/denver-desktop.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Neighborhood hero: Denver, desktop. Swap for art-directed Host photography."
+  "images/neighborhoods/denver-desktop.jpg": {
+    "source": "wikimedia",
+    "photographer": "James St. John (Flickr)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/47445767@N05/49615051057/",
+    "note": "Neighborhood hero: Lake Norman, North Carolina (desktop)."
   },
-  "images/eat/kindred-davidson.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Kindred. Swap for licensed photo or Host photography."
+  "images/eat/kindred-davidson.jpg": {
+    "source": "wikimedia",
+    "photographer": "T. Anthony Bell (US Army Africa, Flickr)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/usarmyafrica/4456993086/",
+    "note": "Thematic restaurant imagery pending Host photography of the actual Kindred dining room."
   },
-  "images/eat/north-harbor-club.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: North Harbor Club. Swap for licensed photo or Host photography."
+  "images/eat/north-harbor-club.jpg": {
+    "source": "wikimedia",
+    "photographer": "LakeNormanMike (Paul Martinez)",
+    "license": "CC BY 4.0",
+    "sourceUrl": "http://www.lakenormanmike.com",
+    "note": "Lake Norman shoreline imagery — not the actual North Harbor Club dining room; pending Host photography."
   },
-  "images/eat/hello-sailor.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Hello, Sailor. Swap for licensed photo or Host photography."
+  "images/eat/hello-sailor.jpg": {
+    "source": "wikimedia",
+    "photographer": "ProjectManhattan (Wikimedia Commons)",
+    "license": "CC BY-SA 3.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Fried_seafood_platter.jpg",
+    "note": "Thematic Calabash-style seafood; pending Host photography of Hello, Sailor."
   },
-  "images/eat/lakehouse-wine-bar.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: LakeHouse. Swap for licensed photo or Host photography."
+  "images/eat/lakehouse-wine-bar.jpg": {
+    "source": "wikimedia",
+    "photographer": "Virginia State Parks staff (Flickr)",
+    "license": "CC BY 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/vastateparksstaff/17794237276/",
+    "note": "Thematic lake-view dining imagery; pending Host photography of LakeHouse Cornelius."
   },
-  "images/eat/fontana-di-vino.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Fontana di Vino. Swap for licensed photo or Host photography."
+  "images/eat/fontana-di-vino.jpg": {
+    "source": "wikimedia",
+    "photographer": "Acabashi (Wikimedia Commons)",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Seafood_linguine_at_the_White_Hart_Inn,_Moreton,_Essex,_England_-_Fujifilm_Superia_200_emulation.jpg",
+    "note": "Thematic Italian pasta imagery; pending Host photography of Fontana di Vino Davidson."
   },
-  "images/eat/epic-chophouse.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Epic Chophouse. Swap for licensed photo or Host photography."
+  "images/eat/epic-chophouse.jpg": {
+    "source": "wikimedia",
+    "photographer": "JIP (Wikimedia Commons)",
+    "license": "CC BY-SA 4.0 + GFDL",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Minute_steak_at_restaurant_Manhattan_Steak_House.jpg",
+    "note": "Thematic steakhouse imagery; pending Host photography of Epic Chophouse Mooresville."
   },
-  "images/eat/fresh-egg.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Fresh Egg. Swap for licensed photo or Host photography."
+  "images/eat/fresh-egg.jpg": {
+    "source": "wikimedia",
+    "photographer": "Mark Miller (Wikimedia Commons)",
+    "license": "CC BY-SA 4.0",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Traditional_Eggs_Benedict.jpg",
+    "note": "Thematic breakfast imagery; pending Host photography of Fresh Egg Cornelius."
   },
-  "images/eat/suffolk-punch-huntersville.png": {
-    "source": "placeholder",
-    "photographer": "generated",
-    "license": "n/a — placeholder, replace before launch",
-    "note": "Eat card photo: Suffolk Punch. Swap for licensed photo or Host photography."
+  "images/eat/suffolk-punch-huntersville.jpg": {
+    "source": "wikimedia",
+    "photographer": "Matthew Black (Flickr)",
+    "license": "CC BY-SA 2.0",
+    "sourceUrl": "https://www.flickr.com/photos/matthewblack/49311516332/",
+    "note": "Thematic brewery-taproom imagery; pending Host photography of Suffolk Punch Brewing Huntersville."
   }
 }
