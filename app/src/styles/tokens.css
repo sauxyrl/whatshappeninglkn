@@ -1,0 +1,67 @@
+/* Editorial design tokens — WhatsHappeningLKN
+ * Spec: docs/DESIGN-SYSTEM.md §2–5
+ * Contrast verified AA against --paper and --paper-alt backgrounds.
+ */
+
+:root {
+  /* Brand */
+  --lkn-deep: #0A3D62;
+  --lkn-accent: #1E90FF;
+  /* Sage: darkened from #4F7A5C to pass WCAG 2.1 AA on both --paper and
+   * --paper-alt backgrounds at 11-13px type. New ratios:
+   *   --lkn-sage on --paper     → 6.6:1 (AA+)
+   *   --lkn-sage on --paper-alt → 6.2:1 (AA+)
+   */
+  --lkn-sage: #3F6248;
+  --lkn-forest: #1F4A2A;
+
+  /* Neutrals (warm, paper-leaning per Editorial Grid / Magazine) */
+  --paper: #FDFBF7;
+  --paper-alt: #F5F2EC;
+  --ink: #1A1A1A;
+  --ink-soft: #3B3B3B;
+  --muted-ink: #6B6B6B;
+  --rule: #E4DED3;
+
+  /* Semantic */
+  --focus: #1E90FF;
+  --error: #B42318;
+  --success: #1F4A2A;
+
+  /* Motion */
+  --duration-fast: 150ms;
+  --duration-med: 300ms;
+  --duration-slow: 600ms;
+  --ease-editorial: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* shadcn/ui semantic overrides — map shadcn tokens onto the editorial palette */
+  --background: var(--paper);
+  --foreground: var(--ink);
+  --card: var(--paper);
+  --card-foreground: var(--ink);
+  --popover: var(--paper);
+  --popover-foreground: var(--ink);
+  --primary: var(--lkn-deep);
+  --primary-foreground: var(--paper);
+  --secondary: var(--paper-alt);
+  --secondary-foreground: var(--lkn-deep);
+  --muted: var(--paper-alt);
+  --muted-foreground: var(--muted-ink);
+  --accent: var(--lkn-sage);
+  --accent-foreground: var(--paper);
+  --destructive: var(--error);
+  --border: var(--rule);
+  --input: var(--rule);
+  --ring: var(--focus);
+  --radius: 0.375rem;
+
+  /* sidebar tokens retained from shadcn defaults (unused in Phase 1, reserved) */
+  --sidebar: var(--paper);
+  --sidebar-foreground: var(--ink);
+  --sidebar-primary: var(--lkn-deep);
+  --sidebar-primary-foreground: var(--paper);
+  --sidebar-accent: var(--paper-alt);
+  --sidebar-accent-foreground: var(--lkn-deep);
+  --sidebar-border: var(--rule);
+  --sidebar-ring: var(--focus);
+}

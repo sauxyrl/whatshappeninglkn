@@ -1,0 +1,22 @@
+# Workspace-root .gitignore (app/ has its own for Next.js-specific rules).
+.DS_Store
+Thumbs.db
+
+# Secrets, never commit.
+.env
+.env.local
+.env.*.local
+.env.production
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+
+# Vendored-but-large host assets that shouldn't be under git (drop point for Host raw material).
+# These belong in cloud storage if they need to persist.
+/raw/
+/scratch/
+
+# Claude Code / Cowork local state
+/.claude/launch.json

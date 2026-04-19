@@ -1,0 +1,89 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "../styles/tokens.css";
+
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+    /* Fonts — wired to next/font/google CSS variables set on <html> */
+    --font-sans: var(--font-sans);
+    --font-serif: var(--font-serif);
+    --font-heading: var(--font-serif);
+
+    /* Editorial color tokens exposed as Tailwind utilities (bg-paper, text-ink, etc.) */
+    --color-lkn-deep: var(--lkn-deep);
+    --color-lkn-accent: var(--lkn-accent);
+    --color-lkn-sage: var(--lkn-sage);
+    --color-lkn-forest: var(--lkn-forest);
+    --color-paper: var(--paper);
+    --color-paper-alt: var(--paper-alt);
+    --color-ink: var(--ink);
+    --color-ink-soft: var(--ink-soft);
+    --color-muted-ink: var(--muted-ink);
+    --color-rule: var(--rule);
+    --color-focus: var(--focus);
+    --color-error: var(--error);
+    --color-success: var(--success);
+
+    /* shadcn-compatible semantic colors (bg-background, text-primary, etc.) */
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-popover: var(--popover);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-muted: var(--muted);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-accent: var(--accent);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-destructive: var(--destructive);
+    --color-border: var(--border);
+    --color-input: var(--input);
+    --color-ring: var(--ring);
+
+    --color-sidebar: var(--sidebar);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-ring: var(--sidebar-ring);
+
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2.2);
+    --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        @apply font-sans;
+    }
+    body {
+        @apply bg-background text-foreground antialiased;
+    }
+    :focus-visible {
+        @apply outline-none ring-2 ring-focus ring-offset-2 ring-offset-background;
+    }
+    .skip-link {
+        @apply absolute left-3 -top-20 z-50 rounded-md bg-primary px-4 py-2 text-primary-foreground text-sm font-medium shadow-sm focus:top-3 transition-[top] duration-150;
+    }
+    .hero-gradient {
+        background:
+            radial-gradient(ellipse at 20% 10%, color-mix(in oklab, var(--lkn-deep) 14%, transparent) 0%, transparent 55%),
+            radial-gradient(ellipse at 85% 85%, color-mix(in oklab, var(--lkn-sage) 16%, transparent) 0%, transparent 60%),
+            linear-gradient(180deg, var(--paper) 0%, var(--paper-alt) 100%);
+    }
+}
