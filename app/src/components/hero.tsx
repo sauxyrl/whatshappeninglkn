@@ -1,22 +1,31 @@
 "use client";
 // Hero
-// ui-ux-pro-max: landing.csv "Video-First Hero" (modified to still image per TRD §8 + PRD §5 — no autoplay video)
-// ui-ux-pro-max: landing.csv "Hero-Centric Design" (hero is 60-80% above fold; one primary CTA)
-// ui-ux-pro-max: ux-guidelines.csv "Motion Sensitivity" (Severity High — parallax respects prefers-reduced-motion)
-// ui-ux-pro-max: ux-guidelines.csv "Reduced Motion" (Severity High — matchMedia gate on mount)
-// DESIGN-SYSTEM.md §1 (Editorial Grid/Magazine + Video-First Hero), §3 (display type), §5 (parallax range 0→-30px, desktop only)
+// ui-ux-pro-max: landing.csv "Video-First Hero" — muted autoplay loop allowed when playsInline + poster fallback
+// ui-ux-pro-max: landing.csv "Hero-Centric Design" (60-80% above fold, single primary CTA)
+// ui-ux-pro-max: ux-guidelines.csv "Motion Sensitivity" Severity High — parallax + video gated on prefers-reduced-motion
+// ui-ux-pro-max: ux-guidelines.csv "Reduced Motion" Severity High — matchMedia on mount
+// ui-ux-pro-max: ux-guidelines.csv "Auto-Play Video" Severity Medium — muted + playsInline + loop; mobile gets poster only
+// DESIGN-SYSTEM.md §1 Editorial Grid/Magazine, §3 display type, §5 motion (no parallax on mobile/reduced-motion)
+// CLAUDE.md §4 hero-video rule — autoplay permitted when muted+looping+playsInline with poster fallback on mobile + reduced-motion.
 //
-// Parallax uses a native passive scroll listener instead of Framer Motion —
-// keeps the homepage client bundle minimal for mobile TBT. The effect is
-// gated on matchMedia for both prefers-reduced-motion and min-width: 768px.
+// Desktop + full-motion: muted looping video as background
+// Mobile OR reduced-motion: static poster image only
+// No video: falls back to image prop if given, otherwise CSS gradient
+// Parallax (-30px over 600px scroll) layers on top via passive scroll listener.
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 export interface HeroImage {
   mobile: string;
   desktop: string;
+  alt: string;
+}
+
+export interface HeroVideo {
+  desktop: string;
+  poster: string;
   alt: string;
 }
 
@@ -27,6 +36,7 @@ export interface HeroProps {
   primaryCta: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
   image?: HeroImage | null;
+  video?: HeroVideo | null;
 }
 
 export function Hero({
@@ -36,41 +46,46 @@ export function Hero({
   primaryCta,
   secondaryCta,
   image,
+  video,
 }: HeroProps) {
   const bgRef = useRef<HTMLDivElement>(null);
+  // Drives whether the video autoplays (desktop + full motion) vs poster only.
+  const [videoActive, setVideoActive] = useState(false);
 
   useEffect(() => {
     const motionMQ = window.matchMedia("(prefers-reduced-motion: reduce)");
     const desktopMQ = window.matchMedia("(min-width: 768px)");
     const el = bgRef.current;
-    if (!el) return;
 
     let rafId = 0;
-    let active = desktopMQ.matches && !motionMQ.matches;
+    let parallaxOn = desktopMQ.matches && !motionMQ.matches;
 
     const update = () => {
+      if (!el) return;
       const y = Math.min(window.scrollY, 600);
       el.style.transform = `translate3d(0, ${Math.round((y / 600) * -30)}px, 0)`;
       rafId = 0;
     };
     const onScroll = () => {
-      if (!active) return;
+      if (!parallaxOn) return;
       if (!rafId) rafId = requestAnimationFrame(update);
     };
-    const onChange = () => {
-      active = desktopMQ.matches && !motionMQ.matches;
-      if (!active) el.style.transform = "";
+    const syncMedia = () => {
+      parallaxOn = desktopMQ.matches && !motionMQ.matches;
+      setVideoActive(parallaxOn);
+      if (!parallaxOn && el) el.style.transform = "";
     };
 
+    syncMedia();
     window.addEventListener("scroll", onScroll, { passive: true });
-    motionMQ.addEventListener("change", onChange);
-    desktopMQ.addEventListener("change", onChange);
-    if (active) update();
+    motionMQ.addEventListener("change", syncMedia);
+    desktopMQ.addEventListener("change", syncMedia);
+    if (parallaxOn) update();
 
     return () => {
       window.removeEventListener("scroll", onScroll);
-      motionMQ.removeEventListener("change", onChange);
-      desktopMQ.removeEventListener("change", onChange);
+      motionMQ.removeEventListener("change", syncMedia);
+      desktopMQ.removeEventListener("change", syncMedia);
       if (rafId) cancelAnimationFrame(rafId);
     };
   }, []);
@@ -80,8 +95,38 @@ export function Hero({
       aria-labelledby="hero-heading"
       className="relative isolate overflow-hidden bg-paper"
     >
-      <div ref={bgRef} aria-hidden="true" className="absolute inset-0 -z-10 will-change-transform">
-        {image ? (
+      <div
+        ref={bgRef}
+        aria-hidden="true"
+        className="absolute inset-0 -z-10 will-change-transform"
+      >
+        {video ? (
+          <>
+            {videoActive ? (
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+                poster={video.poster}
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover"
+              >
+                <source src={video.desktop} type="video/mp4" />
+              </video>
+            ) : (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img
+                src={video.poster}
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover"
+              />
+            )}
+            <div className="absolute inset-0 bg-gradient-to-t from-paper via-paper/60 to-paper/10" />
+          </>
+        ) : image ? (
           <>
             <Image
               src={image.mobile}

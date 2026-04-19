@@ -14,7 +14,7 @@ import {
   Waves,
   type LucideIcon,
 } from "lucide-react";
-import { Hero } from "@/components/hero";
+import { HeroScrollVideo } from "@/components/hero-scroll-video";
 import { VideoCard } from "@/components/video-card";
 import { JsonLd } from "@/components/json-ld";
 import { websiteJsonLd } from "@/lib/schema";
@@ -92,12 +92,17 @@ export default function HomePage() {
   return (
     <>
       <JsonLd data={websiteJsonLd()} />
-      <Hero
+      <HeroScrollVideo
         eyebrow="A guide, not a listicle"
         headline="A quiet guide to Lake Norman."
         subhead="Video-first notes on moving here — by someone who lives down the road."
         primaryCta={primaryCta}
         secondaryCta={{ label: "Why Lake Norman →", href: "/why" }}
+        video={{
+          src: "/media/hero-sunset.mp4",
+          poster: "/media/hero-sunset-poster.jpg",
+          alt: "Aerial view of a lake at sunset — wooded shorelines and boats on the water.",
+        }}
       />
 
       {/* Latest videos */}

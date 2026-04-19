@@ -70,7 +70,7 @@ When inside `app/`, pretend it's a normal Next.js repo. The docs and the skill l
 Restated from TRD + BUILD-PLAN for visibility — violate any of these and revert your change.
 
 1. **No Postgres, Clerk, or Sanity in Phase 1.** Content is MDX in `app/src/content/`. Re-read `docs/PRD-REVIEW.md § 2` if you disagree.
-2. **No video autoplay.** Hero is a still image with optional subtle parallax, disabled under `prefers-reduced-motion` and on mobile.
+2. **Hero video allowed on the homepage.** The homepage hero may render either (a) a muted+looping+`playsInline` autoplay `<video>`, or (b) a scroll-driven `<video>` where scroll position maps to `currentTime`. Either variant MUST fall back to the static poster frame on mobile OR when `prefers-reduced-motion` is set. No autoplay and no scroll-driven video on any non-hero route.
 3. **No masonry video grid.** Uniform 16:9 grid. YouTube thumbnails are 16:9; masonry adds complexity without benefit.
 4. **One canonical URL per video.** `/videos/[slug]`. No modals.
 5. **Every video page has a hand-written 150–300 word intro + transcript.** This is the primary SEO lever. Missing intro fails the content check.
